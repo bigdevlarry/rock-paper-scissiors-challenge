@@ -4,7 +4,7 @@ namespace App\Enums;
 
 enum GameChoiceEnum: string
 {
-    case Rock = 'Rock';
-    case Paper = 'Paper';
-    case Scissors = 'Scissors';
+    case ROCK = 'Rock';
+    case PAPER = 'Paper';
+    case SCISSORS = 'Scissors';
 }

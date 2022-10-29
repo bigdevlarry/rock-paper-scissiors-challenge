@@ -5,7 +5,7 @@ namespace App\Traits;
 use App\Enums\OutcomeEnum;
 use App\Enums\GameChoiceEnum;
 
-trait ROCKPaperScissorsUtil
+trait RockPaperScissorsUtil
 {   
     /**
      * Trait to check the possibility of a win.

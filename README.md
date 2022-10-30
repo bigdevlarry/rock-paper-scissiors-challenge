@@ -26,7 +26,7 @@ Specifications in the clone include
 
 <li> Single CLI command to automate the read and write process with easy to read instructions </li>
 
-<li> The project has a total of 4 test cases (3 Unit and 1 Feature) that executes in 0.06seconds. <li>
+<li> The project has a total of 4 test cases (3 Unit and 1 Feature) that executes in 0.06seconds. </li>
 
 ![Screenshot of test cases ](https://github.com/LarrySul/rock-paper-scissiors-challenge/blob/feature/public/screenshots/test.png)
 
@@ -56,7 +56,7 @@ Rock-Paper-Scissors involves the game elements and it's structured and the rules
 
 <pre> git clone https://github.com/LarrySul/rock-paper-scissiors-challenge </pre> or pull image via docker
 
-<pre>  ....</pre>
+<pre>  docker pull olanrewaju1992/rock-paper-scissors:latest </pre>
 
 <li> Install dependencies: </li>
 

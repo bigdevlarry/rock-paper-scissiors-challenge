@@ -18,19 +18,18 @@ class RockPaperScissorsTest extends TestCase
      *
      * @return void
      */
-    public function test_output_of_game_result()
+    public function test_outcome_of_paper_rock_scissors_game()
     {
-        $result = $this->checkGameResultAndReturnOutcome(GameChoiceEnum::SCISSORS, GameChoiceEnum::ROCK);
-        
+        $result = $this->checkGameResultAndReturnOutcome(GameChoiceEnum::SCISSORS->value,  GameChoiceEnum::SCISSORS->value);
         switch($result){
-            case OutcomeEnum::DRAW :
-                $this->assertEquals(OutcomeEnum::DRAW, $result);
+            case OutcomeEnum::DRAW->value :
+                $this->assertEquals(trim(OutcomeEnum::DRAW->value), $result);
             break;
-            case OutcomeEnum::WIN :
-                $this->assertEquals(OutcomeEnum::WIN, $result);
+            case OutcomeEnum::WIN->value :
+                $this->assertEquals(OutcomeEnum::WIN->value, $result);
             break;
-            case OutcomeEnum::LOSE :
-                $this->assertEquals(OutcomeEnum::LOSE, $result);
+            case OutcomeEnum::LOSE->value :
+                $this->assertEquals(OutcomeEnum::LOSE->value, $result);
             break;
         }
     }

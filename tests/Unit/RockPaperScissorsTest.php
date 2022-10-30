@@ -16,7 +16,7 @@ class RockPaperScissorsTest extends TestCase
      */
     public function test_if_game_result_is_a_win()
     {
-        $result = $this->checkIfGameIsWin(GameChoiceEnum::ROCK, GameChoiceEnum::SCISSORS);
+        $result = $this->checkIfGameIsWin(GameChoiceEnum::PAPER->value, GameChoiceEnum::ROCK->value);
         $this->assertEquals(true, $result);
     }
 
@@ -27,7 +27,7 @@ class RockPaperScissorsTest extends TestCase
      */
     public function test_if_game_result_is_a_draw()
     {
-        $result = $this->checkIfGameIsDraw(GameChoiceEnum::ROCK, GameChoiceEnum::ROCK);
+        $result = $this->checkIfGameIsDraw(GameChoiceEnum::ROCK->value, GameChoiceEnum::ROCK->value);
         $this->assertEquals(true, $result);
     }
 
@@ -38,7 +38,7 @@ class RockPaperScissorsTest extends TestCase
      */
     public function test_if_game_result_is_a_lose()
     {
-        $result = $this->checkIfGameIsLost(GameChoiceEnum::ROCK, GameChoiceEnum::PAPER);
+        $result = $this->checkIfGameIsLost(GameChoiceEnum::ROCK->value, GameChoiceEnum::PAPER->value);
         $this->assertEquals(true, $result);
     }
 }

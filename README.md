@@ -1,64 +1,75 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Rock-Paper-Scissors CLI Game
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+This CLI program is built on the LARAVEL FRAMEWORK. The program is built on a multiplayer, i.e. human vs human or human vs computer. Only three possible input types are accepted (Rock, Paper and Scissors).
+To play the game, users must follow the command prompt. The game's output is either a win, draw or lose, depending on the user's game choice.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Repository Overview 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The repository contains source code on how to play the Rock-Paper-Scissors game. 
 
-## Learning Laravel
+Specifications in the clone include
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<li> The program reads users' I/O  and then displays results in the CLI. The console command file can be found within the console > commands directory with the name RockPaperScissors. </li> </br>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![Screenshot of read write operation via the CLI](https://github.com/LarrySul/rock-paper-scissiors-challenge/blob/feature/public/screenshots/process.png)
 
-## Laravel Sponsors
+<li>To excute the command, users need to run the artisan command `php artisan rock-paper-scissors` in the CLI </li>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<li> Writing of errors to logfile </li>
 
-### Premium Partners
+<li> I/O validation </li>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![Screenshot of I/O process with validation](https://github.com/LarrySul/rock-paper-scissiors-challenge/blob/feature/public/screenshots/validation.png)
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<li> Single CLI command to automate the read and write process with easy to read instructions </li>
 
-## Code of Conduct
+<li> The project has a total of 4 test cases (3 Unit and 1 Feature) that executes in 0.06seconds. <li>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![Screenshot of test cases ](https://github.com/LarrySul/rock-paper-scissiors-challenge/blob/feature/public/screenshots/test.png)
 
-## Security Vulnerabilities
+## Requirements 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<li> Download <a href="https://www.php.net/downloads.php"> PHP V8.1 </a> and above. </li>
 
-## License
+<li> Install <a href="https://getcomposer.org/download/"> Composer </a> </li>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<li> If you'll like to use docker you should <a href="https://www.docker.com/products/docker-desktop/" >download docker desktop </a> and pull the image </li>
+
+
+## Game Explanation
+
+Rock-Paper-Scissors involves the game elements and it's structured and the rules include
+
+<li> Rock beats Scissors </li>
+
+<li> Scissors beats Paper </li>
+
+<li> Paper beats Rock </li>
+
+
+## Steps to run locally 
+
+<li> Clone this repository: </li>
+
+<pre> git clone https://github.com/LarrySul/rock-paper-scissiors-challenge </pre> or pull image via docker
+
+<pre>  ....</pre>
+
+<li> Install dependencies: </li>
+
+<pre> composer install </pre>
+
+<li> Open the CLI in preferred editor and run the command: </li>
+
+<pre> php artisan rock-paper-scissors </pre>
+
+Once the command is done you'll get a success message in the CLI :) </br>
+
+![Screenshot of CLI process with output](https://github.com/LarrySul/rock-paper-scissiors-challenge/blob/feature/public/screenshots/rock-paper-scissors.png)
+
+
+
+

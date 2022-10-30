@@ -23,12 +23,15 @@ Specifications in the clone include
 
 ![Screenshot of I/O process with validation](https://github.com/LarrySul/rock-paper-scissiors-challenge/blob/feature/public/screenshots/validation.png)
 
-
 <li> Single CLI command to automate the read and write process with easy to read instructions </li>
 
 <li> The project has a total of 4 test cases (3 Unit and 1 Feature) that executes in 0.06seconds. </li>
 
 ![Screenshot of test cases ](https://github.com/LarrySul/rock-paper-scissiors-challenge/blob/feature/public/screenshots/test.png)
+
+<li> The project is also dockerized, pushed to dockerhub where it is available to be pulled </li>
+
+![Screenshot of dockerized project ](https://github.com/LarrySul/rock-paper-scissiors-challenge/blob/feature/public/screenshots/docker.png)
 
 ## Requirements 
 

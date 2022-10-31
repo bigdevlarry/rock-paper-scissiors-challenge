@@ -13,10 +13,13 @@ trait RockPaperScissorsUtil
      * @return bool
      */
     private function checkIfGameIsWin( GameChoiceEnum| string $user_one_value, GameChoiceEnum| string $user_two_value) : bool
-    {
+    { 
         if(($this->trimUserInput($user_one_value) == GameChoiceEnum::ROCK->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::SCISSORS->value) || 
                 ( $this->trimUserInput($user_one_value) == GameChoiceEnum::SCISSORS->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::PAPER->value) || 
-                    ( $this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value))
+                    ( $this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value) ||
+                    ( $this->trimUserInput($user_one_value) == GameChoiceEnum::ROCK->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::PAPER->value) ||
+                    ( $this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::SCISSORS->value) ||
+                    ( $this->trimUserInput($user_one_value) == GameChoiceEnum::SCISSORS->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value))
         {
             return true;
         }
@@ -32,8 +35,8 @@ trait RockPaperScissorsUtil
     private function checkIfGameIsDraw( GameChoiceEnum| string $user_one_value, GameChoiceEnum| string $user_two_value) : bool
     {
         if(($this->trimUserInput($user_one_value) == GameChoiceEnum::ROCK->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value) ||
-             ($user_one_value == GameChoiceEnum::SCISSORS->value && $user_two_value == GameChoiceEnum::SCISSORS->value) || 
-                ($this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::PAPER->value))
+            ($user_one_value == GameChoiceEnum::SCISSORS->value && $user_two_value == GameChoiceEnum::SCISSORS->value) || 
+            ($this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::PAPER->value))
         {
             return true;
         } 
@@ -49,7 +52,9 @@ trait RockPaperScissorsUtil
     private function checkIfGameIsLost( GameChoiceEnum| string $user_one_value, GameChoiceEnum|string $user_two_value) : bool
     {
         if(($this->trimUserInput($user_one_value) == GameChoiceEnum::ROCK->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::PAPER->value) ||
-             ($this->trimUserInput($user_one_value) == GameChoiceEnum::SCISSORS->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value))
+            ($this->trimUserInput($user_one_value) == GameChoiceEnum::SCISSORS->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value) ||
+            ($this->trimUserInput($user_one_value) == GameChoiceEnum::ROCK->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::SCISSORS->value) ||
+            ($this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value))
         {
             return true;
         }
@@ -82,5 +87,6 @@ trait RockPaperScissorsUtil
     {
         return trim(ucfirst($value));
     }
+    
 }
 

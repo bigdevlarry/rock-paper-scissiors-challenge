@@ -26,10 +26,10 @@ class RockPaperScissorsTest extends TestCase
                 $this->assertEquals(trim(OutcomeEnum::DRAW->value), $result);
             break;
             case OutcomeEnum::WIN->value :
-                $this->assertEquals(OutcomeEnum::WIN->value, $result);
+                $this->assertEquals(trim(OutcomeEnum::WIN->value), $result);
             break;
             case OutcomeEnum::LOSE->value :
-                $this->assertEquals(OutcomeEnum::LOSE->value, $result);
+                $this->assertEquals(trim(OutcomeEnum::LOSE->value), $result);
             break;
         }
     }

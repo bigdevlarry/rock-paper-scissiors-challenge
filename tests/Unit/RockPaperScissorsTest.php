@@ -16,7 +16,7 @@ class RockPaperScissorsTest extends TestCase
      */
     public function test_if_game_result_is_a_win()
     {
-        $result = $this->checkIfGameIsWin(GameChoiceEnum::PAPER->value, GameChoiceEnum::SCISSORS->value);
+        $result = $this->checkIfGameIsWin(GameChoiceEnum::PAPER->value, GameChoiceEnum::ROCK->value);
         $this->assertEquals(true, $result);
     }
 

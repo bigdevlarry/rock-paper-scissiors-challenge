@@ -18,7 +18,6 @@ trait RockPaperScissorsUtil
                 ( $this->trimUserInput($user_one_value) == GameChoiceEnum::SCISSORS->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::PAPER->value) || 
                     ( $this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value) ||
                     ( $this->trimUserInput($user_one_value) == GameChoiceEnum::ROCK->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::PAPER->value) ||
-                    ( $this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::SCISSORS->value) ||
                     ( $this->trimUserInput($user_one_value) == GameChoiceEnum::SCISSORS->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value))
         {
             return true;
@@ -54,7 +53,8 @@ trait RockPaperScissorsUtil
         if(($this->trimUserInput($user_one_value) == GameChoiceEnum::ROCK->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::PAPER->value) ||
             ($this->trimUserInput($user_one_value) == GameChoiceEnum::SCISSORS->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value) ||
             ($this->trimUserInput($user_one_value) == GameChoiceEnum::ROCK->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::SCISSORS->value) ||
-            ($this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value))
+            ($this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::ROCK->value) ||
+            ( $this->trimUserInput($user_one_value) == GameChoiceEnum::PAPER->value && $this->trimUserInput($user_two_value) == GameChoiceEnum::SCISSORS->value))
         {
             return true;
         }

@@ -39,30 +39,12 @@ class RockPaperScissors extends Command
      *
      * @return int
      */
+    private $user_one, $game_options, $game_setting, $user_two, $user_one_game_choice, $user_two_game_choice, 
+            $game_result, $computer_choice, $play_new_game;
+            
     public function handle()
     {   
         $this->startRockPaperScissorsGame();
-
-        return 0;
-    }
-
-    private function switch_result_outcome($user_one_value, $user_two_value, $username) : string
-    {
-        $result = $this->checkGameResultAndReturnOutcome($user_one_value, $user_two_value);
-
-        switch($result){
-            case OutcomeEnum::DRAW->value :
-                $final_result = 'Game ends in draw';
-            break;
-            case OutcomeEnum::WIN->value :
-                $final_result = "{$username} wins";
-            break;
-            case OutcomeEnum::LOSE->value :
-                $final_result = "{$username} loses";
-            break;
-        }
-
-        return $final_result;
     }
 
     private function startRockPaperScissorsGame() : void
@@ -94,8 +76,6 @@ class RockPaperScissors extends Command
                 $this->info($game_result);
                 
                 $this->restartGame();
-
-                return;
             break;
             default:
             $this->info('The game will be played with a computer. ');
@@ -111,9 +91,26 @@ class RockPaperScissors extends Command
             $this->info($game_result);
 
             $this->restartGame();
-
-            return;
         }
+    }
+
+    private function switch_result_outcome($user_one_value, $user_two_value, $username) : string
+    {
+        $result = $this->checkGameResultAndReturnOutcome($user_one_value, $user_two_value);
+
+        switch($result){
+            case OutcomeEnum::DRAW->value :
+                $final_result = 'Game ends in draw';
+            break;
+            case OutcomeEnum::WIN->value :
+                $final_result = "{$username} wins";
+            break;
+            case OutcomeEnum::LOSE->value :
+                $final_result = "{$username} loses";
+            break;
+        }
+
+        return $final_result;
     }
 
     public function restartGame() :void
